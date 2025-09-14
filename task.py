@@ -51,6 +51,15 @@ def get_trainer_by_id(id):
     trainer['_id'] = str(trainer['_id'])
     return jsonify(trainer), 200
 
+# Get trainer by employee ID
+@app.route('/trainer/employee/<empId>', methods=['GET'])
+def get_trainer_by_empId(empId):
+    trainer = mongo.db.trainers.find_one({'empId': empId})
+    if not trainer:
+        return jsonify({"error": "Trainer not found"}), 404
+    trainer['_id'] = str(trainer['_id'])
+    return jsonify(trainer), 200
+
 # Get trainers by subject
 @app.route('/trainer/<subject>/topic', methods=['GET'])
 def get_trainers_by_subject(subject):

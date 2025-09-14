@@ -17,18 +17,61 @@
 
     <main id="main-content">
         <div id="trainers-section" class="section">
-            <h2>Trainers Management</h2>
+            <h2><i class="fas fa-users"></i> Trainers Management</h2>
+            
+            <!-- Search Controls -->
+            <div class="search-controls">
+                <div class="search-section">
+                    <h3><i class="fas fa-search"></i> Search Trainer</h3>
+                    <form id="search-trainer-form" onsubmit="event.preventDefault(); getTrainerByEmpId(document.getElementById('search-empId').value)">
+                        <input type="text" id="search-empId" placeholder="Search by Employee ID" required>
+                        <button type="submit"><i class="fas fa-search"></i> Search by ID</button>
+                    </form>
+                </div>
+
+                <div class="search-section">
+                    <h3><i class="fas fa-book-reader"></i> Search by Subject</h3>
+                    <form id="search-subject-form" onsubmit="event.preventDefault(); getTrainersBySubject(document.getElementById('search-subject').value)">
+                        <input type="text" id="search-subject" placeholder="Search by Subject" required>
+                        <button type="submit"><i class="fas fa-search"></i> Search by Subject</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Search Results -->
+            <div id="search-results" class="search-results">
+                <button id="clear-search" onclick="clearSearch()" style="display: none;">
+                    <i class="fas fa-times"></i> Clear Search
+                </button>
+                <div id="results-container"></div>
+            </div>
+
+            <!-- Add Trainer Form -->
             <form id="trainer-form">
                 <input type="text" id="trainer-name" placeholder="Trainer Name" required>
                 <input type="text" id="trainer-empId" placeholder="Employee ID" required>
                 <input type="text" id="trainer-subject" placeholder="Subject" required>
                 <button type="submit">Add Trainer</button>
             </form>
+            
             <div id="trainers-list"></div>
         </div>
 
         <div id="subjects-section" class="section">
-            <h2>Subjects Management</h2>
+            <h2><i class="fas fa-book-open"></i> Subjects Management</h2>
+            
+            <!-- Add this new search form -->
+            <div class="subject-search-section">
+                <h3><i class="fas fa-search"></i> Search Trainers by Subject</h3>
+                <form id="search-subject-trainers-form">
+                    <input type="text" id="search-subject-input" placeholder="Enter subject name..." required>
+                    <button type="submit"><i class="fas fa-search"></i> Find Trainers</button>
+                </form>
+            </div>
+
+            <div id="subject-search-results"></div>
+            
+            <!-- Existing subject form and list -->
             <form id="subject-form">
                 <input type="text" id="subject-name" placeholder="Subject Name" required>
                 <button type="submit">Add Subject</button>
