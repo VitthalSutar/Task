@@ -102,7 +102,7 @@ python task.py
 
 Created by Vitthal Sutar - feel free to reach out!
 
-- GitHub: [@yourusername](https://github.com/VitthalSutar)
+- GitHub: [@Vitthal (Anish) Sutar](https://github.com/VitthalSutar)
 - Email: gameranish7105@gmail.com
 
 ---
