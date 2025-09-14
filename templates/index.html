@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Management</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav>
+        <h1>Institute Management System</h1>
+        <div class="nav-links">
+            <a href="#" onclick="showTrainers()">Trainers</a>
+            <a href="#" onclick="showSubjects()">Subjects</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div id="trainers-section" class="section">
+            <h2>Trainers Management</h2>
+            <form id="trainer-form">
+                <input type="text" id="trainer-name" placeholder="Trainer Name" required>
+                <input type="text" id="trainer-empId" placeholder="Employee ID" required>
+                <input type="text" id="trainer-subject" placeholder="Subject" required>
+                <button type="submit">Add Trainer</button>
+            </form>
+            <div id="trainers-list"></div>
+        </div>
+
+        <div id="subjects-section" class="section">
+            <h2>Subjects Management</h2>
+            <form id="subject-form">
+                <input type="text" id="subject-name" placeholder="Subject Name" required>
+                <button type="submit">Add Subject</button>
+            </form>
+            <div id="subjects-list"></div>
+        </div>
+    </main>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
