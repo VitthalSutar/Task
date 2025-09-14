@@ -47,8 +47,8 @@ A powerful **Institute Management System** built with Flask and MongoDB, designe
 
 1️⃣ **Clone the repository**
 ```bash
-git clone https://github.com/VitthalSutar/task
-cd task
+git clone https://github.com/VitthalSutar/institute-management.git
+cd institute-management
 ```
 
 2️⃣ **Set up virtual environment**
